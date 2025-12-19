@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Tyylit.css">
+    <title>Äänestestys sovellus</title>
+</head>
+<header>
+    <h1>Äänestys</h1>
+    <span>Valikko</span>
+    <span id="Kirjaudu" onclick="toggle()">Kirjaudu</span>
+    <div id="Avaa1" hidden>
+        <input type="text" value="Käyttäjänimi"><br>
+        <input type="text" value="Salasana">
+    </div>
+</header>
+<body>
+    <div>
+        <div id="Moderator_Panel">
+            <h1>Mod tools</h1><br>
+            <input type="button" value="Luo Äänestestys">
+            <input type="button" value="Poista Äänestestys">
+        </div><br>
+        <div id="Äänestestys_Lista">
+            <h1>Äänestykset</h1>
+            <div id="Äänestykset">
+                <span>Tyhjä</span>
+            </div>
+        </div><br>
+        <div id="Äänestyksen_Sisältö">
+            <h1>Sisältö</h1>
+            <div id="Sisältö">
+                
+            </div>
+            <input type="button" id="Äänestä_Puolesta" value="Äänestä">
+            <input type="button" id="Äänestä_Vastaan" value="Äänestä vastaan">
+        </div>
+    </div>
+    <script src="Koodi.js"></script>
+</body>
+</html>
