@@ -34,14 +34,54 @@ span {
 }
 
 #Kirjaudu {
+    border: 2px solid black;
+    padding: 10px;
+    background-color: lightgrey;
     margin-left: 50%;
     cursor: pointer;
 }
 
 #Avaa1 {
     position: absolute;
-    top: 100%;
-    left: 80%;
-    
+    top: 80%;
+    left: 75%;
+    padding: 5px;
     background-color: grey;
+    border: 2px solid black;
+}
+
+input[type="text"] {
+    margin-bottom: 2px;
+}
+
+#Luonti_paneeli {
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    padding: 10px;
+    background-color: lightgrey;
+    border: 2px solid black;
+}
+#Luonti_paneeli input, #Luonti_paneeli textarea {
+    display: block;
+    margin: 5px auto;
+    width: 200px;
+    min-width: 5vw;
+    min-height: 1vw;
+}
+
+#Äänestykset {
+    overflow-y: auto;
+    max-height: 20vh;
+    border: 2px solid black;
+}
+
+#Valittu_Sisältö {
+    overflow-y: auto;
+    max-height: 30vh;
+    border: 1px solid gray;
+}
+
+.kortti.selected {
+    border: 2px solid blue !important;
 }

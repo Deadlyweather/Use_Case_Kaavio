@@ -8,33 +8,43 @@
 </head>
 <header>
     <h1>Äänestys</h1>
-    <span>Valikko</span>
     <span id="Kirjaudu" onclick="toggle()">Kirjaudu</span>
     <div id="Avaa1" hidden>
-        <input type="text" value="Käyttäjänimi"><br>
-        <input type="text" value="Salasana">
+        <input type="text" id="Käyttäjänimi" placeholder="Käyttäjänimi"><br>
+        <input type="text" id="Salasana" placeholder="Salasana"><br>
+        <input type="button" value="Kirjaudu" onclick="Login()"><br>
+        <span id="Nimi_Ilmoitus" style="color: yellow;">Nimi tyhjä</span><br>
+        <span id="Pass_Ilmoitus" style="color: yellow;">Salasana tyhjä</span><br>
+        <span id="Login_Ilmoitus" style="color: red;">Täytä kaikki kentät!</span>
     </div>
 </header>
 <body>
     <div>
         <div id="Moderator_Panel">
             <h1>Mod tools</h1><br>
-            <input type="button" value="Luo Äänestestys">
-            <input type="button" value="Poista Äänestestys">
+            <input type="button" value="Luo Äänestestys" onclick="LuoÄänestys()">
+            <input type="button" value="Poista Äänestestys" onclick="PoistaÄanestys()">
         </div><br>
         <div id="Äänestestys_Lista">
             <h1>Äänestykset</h1>
             <div id="Äänestykset">
-                <span>Tyhjä</span>
+                <span id="tyhjä">Tyhjä</span>
+            </div>
+            <div id="Luonti_paneeli" hidden>
+                <input type="text" id="Aihe" placeholder="Äänestyksen aihe"><br>
+                <textarea id="Sisältö" placeholder="Äänestyksen sisältö"></textarea><br>
+                <input type="button" value="Luo" onclick="Luo()">
             </div>
         </div><br>
-        <div id="Äänestyksen_Sisältö">
+        <div id="Äänestyksen_Sisältö" hidden>
             <h1>Sisältö</h1>
             <div id="Sisältö">
-                
+                <h2 id="Valittu_Aihe"></h2>
+                <p id="Valittu_Sisältö"></p>
+                <p id="valitun_Äänet"></p>
             </div>
-            <input type="button" id="Äänestä_Puolesta" value="Äänestä">
-            <input type="button" id="Äänestä_Vastaan" value="Äänestä vastaan">
+            <input type="button" id="Äänestä_Puolesta" value="Äänestä" hidden>
+            <input type="button" id="Äänestä_Vastaan" value="Äänestä vastaan" hidden>
         </div>
     </div>
     <script src="Koodi.js"></script>
